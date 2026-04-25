@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a0a0a;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+/* iPhone 17 Pro Max optimized app shell */
+.app-shell {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app-header {
+  background: #1a237e;
+  color: white;
+  padding: max(16px, env(safe-area-inset-top)) 20px 16px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-main {
+  padding: 20px;
+  padding-bottom: max(20px, env(safe-area-inset-bottom));
+}
+
+/* Touch-friendly button base */
+.btn-touch {
+  min-height: 48px;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Prevent iOS zoom on inputs */
+input, textarea, select {
+  font-size: 16px;
+}
