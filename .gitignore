@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Environment variables (IMPORTANT)
+.env
+backend/.env
+
+# Node modules (extra safety)
+backend/node_modules/
+
+# Build artifacts
+build/
